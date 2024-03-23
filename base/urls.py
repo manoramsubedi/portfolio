@@ -1,10 +1,12 @@
 
-
 from django.contrib import admin
-from django.urls import path, include
-from . import views
+from django.urls import path
+from . views import HomeTemplateView
+
+
+
 
 urlpatterns = [
-    path('', views.home, name=""),
+    path('', HomeTemplateView.as_view()),
     
 ]
